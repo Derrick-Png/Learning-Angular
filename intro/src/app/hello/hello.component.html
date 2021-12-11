@@ -1,0 +1,11 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Status</th>
+    </tr>
+    <tr *ngFor="let record of lol; let theIndex = index; let isEven = even; let isOdd = odd;" [ngClass]="{odd: isOdd, even: isEven}">
+        <td>{{record.name}}</td>
+        <td>{{record.online}}</td>
+    </tr>
+</table>
+<button value="submit" (click)="submitBtn">Submit</button>
